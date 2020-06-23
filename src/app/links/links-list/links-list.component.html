@@ -1,7 +1,8 @@
-<h1>Links</h1>
-<div *ngFor="let link of links" style="width: 300px;">
+<h5>Your last shorted links</h5>
+<p>We save your last created short links in this device using cookies</p>
+<div class="row" *ngFor="let link of links">
   <app-link-details [link]='link'></app-link-details>
 </div>
 <div style="margin-top:20px;">
-  <button type="button" class="button btn-danger" (click)='deleteLinks()'>Delete All</button>
+  <button type="button" class="btn btn-danger" (click)='deleteLinks()'>Delete All</button>
 </div>

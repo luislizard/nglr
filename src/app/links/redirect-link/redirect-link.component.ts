@@ -18,7 +18,11 @@ export class RedirectLinkComponent implements OnInit {
     var id = this.route.snapshot.params['id'];
     this.linkService.getSingleLink(id).valueChanges().subscribe(links => {
       this.links = links;
-      window.location.href = 'http://'+links.link;
+
+      if(links.active==true){
+        window.location.href = 'http://'+links.link;
+      }
+
     })
 
    }

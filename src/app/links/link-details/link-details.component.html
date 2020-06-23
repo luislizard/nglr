@@ -1,19 +1,12 @@
-<div *ngIf="link">
-  <div>
-    <label>Original URL: </label> {{link.link}}
+<div *ngIf="link" class="row">
+  <div class="card m-2 ml-5">
+    <div class="card-body" style="width: 300px;">
+      <h5 class="card-title"><a routerLink="/{{link.key}}">{{currentLink}}{{link.key}}</a></h5>
+      <p class="card-text">{{link.link}}</p>
+      <a class="btn btn-secondary btn-sm" *ngIf='link.active' (click)='updateActive(false)'>Inactive</a>
+      <a class="btn btn-primary btn-sm" *ngIf='!link.active' (click)='updateActive(true)'>Active</a>
+      <a class="btn btn-danger btn-sm ml-3" (click)='deleteLink()'>Delete</a>
+      <a class="btn btn-success btn-sm ml-3" (click)="copyMessage(currentLink+link.key)" value="click to copy" >Copy URL</a>
+    </div>
   </div>
-  <div>
-    <label>Shorted Url: </label> <a routerLink="/{{link.key}}">{{currentLink}}{{link.key}}</a>
-  </div>
-  <div>
-    <label>Active: </label> {{link.active}}
-  </div>
-
-  <span class="button is-small btn-primary" *ngIf='link.active' (click)='updateActive(false)'>Inactive</span>
-
-  <span class="button is-small btn-primary" *ngIf='!link.active' (click)='updateActive(true)'>Active</span>
-
-  <span class="button is-small btn-danger" (click)='deleteLink()'>Delete</span>
-
-  <hr/>
 </div>

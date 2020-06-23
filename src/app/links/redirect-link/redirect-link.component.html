@@ -1,8 +1,2 @@
-<p>redirect-link works! {{ links.link }}key</p>
-<h1>Links</h1>
-<div *ngFor="let link of links" style="width: 300px;">
-  foi
-  {{ link.key }} {{ link.short }}
-</div>
-
-
+<p *ngIf="links.active">redirecting to <strong>{{ links.link }}</strong></p>
+<p *ngIf="!links.active">This URL was deactiveted</p>
