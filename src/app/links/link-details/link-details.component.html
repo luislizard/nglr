@@ -1,0 +1,19 @@
+<div *ngIf="link">
+  <div>
+    <label>Original URL: </label> {{link.link}}
+  </div>
+  <div>
+    <label>Shorted Url: </label> <a routerLink="/{{link.key}}">{{currentLink}}{{link.key}}</a>
+  </div>
+  <div>
+    <label>Active: </label> {{link.active}}
+  </div>
+
+  <span class="button is-small btn-primary" *ngIf='link.active' (click)='updateActive(false)'>Inactive</span>
+
+  <span class="button is-small btn-primary" *ngIf='!link.active' (click)='updateActive(true)'>Active</span>
+
+  <span class="button is-small btn-danger" (click)='deleteLink()'>Delete</span>
+
+  <hr/>
+</div>

@@ -1,0 +1,7 @@
+<h1>Links</h1>
+<div *ngFor="let link of links" style="width: 300px;">
+  <app-link-details [link]='link'></app-link-details>
+</div>
+<div style="margin-top:20px;">
+  <button type="button" class="button btn-danger" (click)='deleteLinks()'>Delete All</button>
+</div>
