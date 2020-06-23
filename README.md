@@ -1,4 +1,12 @@
-# Encurtador
+
+# Try it online
+https://luislizard.github.io/nglr/
+
+# NGLR- Link Shortner
+This link shortner uses Cookies to save the last shorted Urls on device.
+Made with Angular and FireBase
+
+
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.9.
 
